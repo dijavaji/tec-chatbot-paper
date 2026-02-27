@@ -1,20 +1,22 @@
 # Manual de Usuario - Sistema Smart de Chatbot
 
-## Documento de Visión y Alcance
-
 ### Propósito del Sistema
 
 El **Sistema Smart de Chatbot** es una plataforma conversacional basada en inteligencia artificial diseñada para transformar la manera en que las organizaciones interactúan con sus clientes. Este sistema utiliza redes neuronales avanzadas para el entrenamiento de modelos preentrenados, combinado con robustas medidas de ciberseguridad, para ofrecer respuestas contextualmente relevantes mientras garantiza la protección de datos sensibles.
 
-### Arquitectura Técnica
+### Requisitos de la funcionalidad
 
-El sistema está construido sobre una arquitectura moderna y escalable:
+Requerimientos:
+- **Hardware**:
+	4Gb, en memoria RAM
+	Conexión de Red/wifi internet
+- **Software**:
+	Preinstalado las herramientas requeridas.
+	Navegador de internet.
+	App Telegram
+	Sistema Operativo Windows.
+- **Tipos de usuario**: La aplicación es realizada bajo permisos y restricciones, de tal manera que el acceso muestra diferentes vistas según el usuario y rol.
 
-- **Motor de IA**: Implementado en python para procesamiento de lenguaje natural
-- **Microservicio de Mensajería**: Desarrollado en Java con Spring Boot
-- **Contenerización**: Cada componente ejecutado en contenedores Docker
-- **Accesibilidad**: Interfaz web accesible desde cualquier navegador con conexión a Internet
-- **Dispositivos Móviles**: Aplicación compatible con smartphones y tablets
 
 ### Ventajas Competitivas
 
