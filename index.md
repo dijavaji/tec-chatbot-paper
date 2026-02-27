@@ -1,4 +1,3 @@
-- [User Manual](00-usermanual.md)
 - [Install & First Run](01-install-first-run.md)
 - [Diagrams](02-diagrams.md)
 - [Software Technical Manual](03-technical-manual.md)

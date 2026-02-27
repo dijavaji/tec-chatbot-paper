@@ -1,6 +1,6 @@
 # Chatbot Documentation
 
-Technoloqie Computer Advicei [Technoloqie](https://technoloqie.cloud).
+Technoloqie Computer Advice [Technoloqie](https://chatbot.technoloqie.cloud).
 
 ## Course Content
 
