@@ -15,7 +15,8 @@ A continuación, se muestra el diagrama de  casos de usos a implementarse para e
 ### Diseño de diagramas de despliegue
 Describe el escenario de distribución física del sistema sobre los cuales se ejecutará y hará el despliegue. Muestra la comunicación entre los diferentes microservicios que componen el escenario.
 
-<div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{"highlight":"#0000ff","lightbox":false,"nav":true,"resize":true,"dark-mode":"light","toolbar":"zoom layers tags","edit":"_blank","url":"https://drive.google.com/uc?id=11qEmWJ0ir9RmQVn_2lMrIeYkJvzS8wEo&export=download"}"></div>
+<div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;lightbox&quot;:false,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;dark-mode&quot;:&quot;light&quot;,&quot;toolbar&quot;:&quot;zoom layers tags&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;url&quot;:&quot;https://drive.google.com/uc?id=11qEmWJ0ir9RmQVn_2lMrIeYkJvzS8wEo&amp;export=download&quot;}"></div>
+
 
 ### Diseño del Diagrama de Flujo de Datos (DFD)
 El Diagrama de Flujo de Datos (DFD) ilustra cómo los datos son procesados y transformados dentro del sistema, mostrando las entradas, salidas, procesos y almacenes de datos. Este diagrama ayuda a visualizar el flujo de información y las interacciones entre los componentes del sistema.
