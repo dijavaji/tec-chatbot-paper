@@ -1,5 +1,5 @@
 - [Install & First Run](01-install-first-run.md)
-- [Diagrams](02-diagrams.md)
+- [Software Diagrams](02-diagrams.md)
 - [Software Technical Manual](03-technical-manual.md)
 - [Software User Manual](04-user-manual.md)
-- [Software Architecture Document](05-architecture-document.md)
+- [Use Case](05-usecase-document.md)
