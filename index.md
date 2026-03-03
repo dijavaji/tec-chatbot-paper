@@ -2,4 +2,4 @@
 - [Software Diagrams](02-diagrams.md)
 - [Software Technical Manual](03-technical-manual.md)
 - [Software User Manual](04-user-manual.md)
-- [Use Case](05-usecase-document.md)
+- [The User Story](05-userhistory-document.md)
