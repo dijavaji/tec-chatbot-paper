@@ -2,141 +2,229 @@
 
 ## Introducción
 
-Los Diagramas de Flujo de Datos (DFD) representan el flujo de información dentro del Sistema Smart de Chatbot, mostrando cómo los datos son procesados, almacenados y transformados entre los diferentes componentes del sistema. Esta documentación detalla la arquitectura de flujo de datos del nivel 0 (contexto) del sistema.
+Este documento describe los Diagramas de Flujo de Datos (DFD) para el **Sistema Smart de Chatbot** de mensajería automatizada con procesamiento de lenguaje natural. El DFD proporciona una visión clara de cómo los datos fluyen a través del sistema, desde el momento en que el cliente envía un mensaje hasta que recibe una respuesta generada por el motor de procesamiento de lenguaje natural (NLP).
 
-## DFD Nivel 1 - Diagrama de Contexto
+El objetivo es proporcionar un manual técnico detallado para desarrolladores e ingenieros de software, facilitando la comprensión del flujo de datos, la integración de módulos y la implementación de modelos NLP y LLM.
 
-### Descripción General
-El Diagrama de Contexto (Nivel 1 DFD) proporciona una visión general de alto nivel del Sistema Smart de Chatbot, mostrando las interacciones entre el sistema y las entidades externas con las que se comunica.
+## **1. DFD Primer Nivel**
 
-### Componentes del DFD Nivel 1
+### **1.1 Descripción General**
 
-#### Entidades Externas
-1. **Usuario Final** - Interactúa con el sistema a través de la interfaz web del chatbot
-2. **Administrador del Sistema** - Gestiona y configura el sistema a través del panel administrativo
-3. **Sistemas Externos** - Fuentes de datos externas como ERP, CMS, y bases de datos empresariales
+El DFD de primer nivel muestra cómo los mensajes enviados por el cliente son recibidos, procesados y respondidos mediante el motor NLP/NLG.
 
-#### Procesos Principales
-1. **Procesamiento de Consultas del Usuario** - Maneja las interacciones conversacionales
-2. **Gestión de Conocimiento** - Administra la base de conocimiento del chatbot
-3. **Análisis y Reportes** - Genera métricas y análisis de las interacciones
+**Entidades Externas:**
 
-#### Almacenes de Datos
-1. **Base de Conocimiento del Chatbot** - Almacena los patrones conversacionales y respuestas
-2. **Registro de Interacciones** - Guarda el historial de conversaciones
-3. **Datos de Configuración** - Configuraciones del sistema y preferencias de usuario
+- **E1: Cliente** – Envia y recibe mensajes de texto.
 
-### Flujos de Datos Principales
+**Procesos:**
 
-#### Entrada
-- Consultas y preguntas de usuarios
-- Datos de configuración del administrador
-- Fuentes de conocimiento externas
+- **P1: Enviar mensaje** – Captura el mensaje del cliente.
+- **P2: Recibir mensaje** – Gestiona la recepción y validación del mensaje.
+- **P3: Procesar texto** – Analiza y procesa el mensaje para inferir la intención.
 
-#### Salida
-- Respuestas automatizadas del chatbot
-- Reportes de análisis y métricas
-- Actualizaciones de la base de conocimiento
+**Almacenes de Datos:**
 
-![Diagrama DFD Primer Nivel](assets/img/dfd-level0.png "Diagrama DFD Primer Nivel")
+- **A1: Frase** – Mensajes recibidos antes de procesarse.
+- **A2: Tokenize** – Datos tokenizados y preparados para análisis.
 
-## DFD Nivel 2 - Descomposición Funcional
+**Flujos de Datos:**
 
-### Proceso 1: Gestión de Conversaciones
-**Descripción:** Procesa las interacciones en tiempo real con los usuarios finales
-
-**Subprocesos:**
-- Recepción de mensajes
-- Análisis de intención del usuario
-- Generación de respuestas contextuales
-- Gestión del estado de la conversación
-
-### Proceso 2: Administración del Conocimiento
-**Descripción:** Gestiona y actualiza la base de conocimiento del chatbot
-
-**Subprocesos:**
-- Carga de datos desde fuentes externas
-- Procesamiento ETL de información
-- Entrenamiento de modelos de IA
-- Validación de respuestas
-
-### Proceso 3: Generación de Reportes
-**Descripción:** Produce análisis y métricas del desempeño del sistema
-
-**Subprocesos:**
-- Recolección de datos de interacción
-- Cálculo de KPIs de desempeño
-- Generación de dashboards
-- Exportación de reportes
-
-## Especificaciones Técnicas
-
-### Estándares de Modelado
-- **Notación:** Yourdon/DeMarco
-- **Herramienta:** Microsoft Visio / draw.io
-- **Versión:** 1.0
-
-### Convenciones de Nomenclatura
-- **Procesos:** P1, P2, P3...
-- **Almacenes:** D1, D2, D3...
-- **Entidades:** E1, E2, E3...
-- **Flujos:** Descripción verbal del dato
-
-### Reglas de Validación
-1. Todos los procesos deben tener al menos una entrada y una salida
-2. Los almacenes deben ser accedidos solo a través de procesos
-3. Las entidades externas no pueden comunicarse directamente entre sí
-
-## Consideraciones de Arquitectura
-
-### Escalabilidad
-Los DFD han sido diseñados considerando:
-- Crecimiento horizontal mediante microservicios
-- Separación de concerns entre procesamiento y almacenamiento
-- Capacidad de distribuir carga entre diferentes instancias
-
-### Seguridad
-- Autenticación requerida para acceso administrativo
-- Validación de entrada en todos los flujos de datos
-- Encriptación de datos sensibles en tránsito y en reposo
-
-### Mantenibilidad
-- Documentación completa de todos los flujos
-- Versionado de diagramas
-- Capacidad de trazar datos a través del sistema
-
-## Relación con Otros Diagramas
-
-Este DFD se relaciona con:
-- **Diagrama de Despliegue:** Muestra la implementación física
-- **Diagrama de Secuencia:** Detalla las interacciones temporales
-- **Diagrama de Clases:** Define la estructura estática del sistema
-
-## Notas de Implementación
-
-### Tecnologías Utilizadas
-- **Backend:** Java Spring Boot para procesamiento de mensajes
-- **IA/NLP:** Python con frameworks de machine learning
-- **Almacenamiento:** MySQL y MongoDB
-- **Frontend:** React.js para interfaz de usuario
-
-### Consideraciones de Performance
-- Latencia objetivo: < 2 segundos para respuestas
-- Throughput: Soporte para 1000+ conversaciones concurrentes
-- Disponibilidad: 99.9% uptime
-
-## Versión y Control de Cambios
-
-| Versión | Fecha | Descripción | Autor |
-|---------|-------|-------------|-------|
-| 1.0 | 2026-03-03 | Documentación inicial del DFD Nivel 0 | Sistema |
-
-## Referencias
-
-- IEEE Standard 1016-2009 - Recommended Practice for Software Design Descriptions
-- Yourdon/DeMarco DFD Notation Standards
-- Documentación del Sistema Smart de Chatbot
+| ID | Flujo | Descripción |
+|----|-------|-------------|
+| F1 | Mensaje de texto | Mensaje enviado por el cliente. |
+| F2 | Mensaje de texto | Transmisión del mensaje al sistema. |
+| F3 | Texto mensaje nuevo | Texto listo para procesamiento. |
+| F4 | Frase de texto | Mensaje limpio para tokenización. |
+| F5 | Datos limpios y tokenizados | Tokens generados por NLP. |
+| F6 | Respuesta de intención | Respuesta inferida del modelo NLP. |
+| F7 | Mensaje respuesta intención | Respuesta enviada al cliente. |
 
 ---
 
-*Nota: Esta documentación requiere la integración con los diagramas visuales correspondientes para completar el análisis. Los componentes específicos deben ser verificados contra el diagrama DFD visual en `assets/img/dfd-level0.png`.*
+### **1.2 Diccionario de Datos – Primer Nivel**
+
+| Elemento | Descripción | Tipo | Proceso Asociado |
+|----------|-------------|------|-----------------|
+| F1 | Mensaje del cliente | String | P1 |
+| F2 | Mensaje de texto al sistema | String | P2 |
+| F3 | Texto mensaje nuevo | String | P2 |
+| F4 | Frase de texto | String | P3 |
+| F5 | Datos tokenizados | Array | P3 |
+| F6 | Respuesta de intención | String | P3 |
+| F7 | Mensaje respuesta intención | String | P3 |
+| A1 | Frase | String | P2 |
+| A2 | Tokenize | Array | P3 |
+
+
+![Diagrama DFD Primer Nivel](assets/img/dfd-level0.jpg "Diagrama DFD Primer Nivel")
+
+## **2. DFD Segundo Nivel – P2: Recibir Mensaje**
+
+### **2.1 Descripción General**
+
+El proceso **P2: Recibir mensaje** se encarga de validar y registrar los mensajes enviados por el cliente.
+
+**Subprocesos:**
+
+- **P2.1: Validar frase** – Verifica la estructura y contenido del mensaje.
+- **P2.2: Registro frase** – Almacena el mensaje validado en A1.
+
+**Flujos de Datos:**
+
+| ID | Flujo | Descripción |
+|----|-------|-------------|
+| F2 | Mensaje de texto | Mensaje recibido del cliente. |
+| F2.1 | Datos crudos del mensaje | Mensaje validado listo para registro. |
+| F3 | Texto mensaje nuevo | Mensaje almacenado en A1. |
+
+**Almacén de Datos:**
+
+- **A1: Frase** – Contiene mensajes validados para su posterior procesamiento.
+
+![Diagrama DFD Segundo Nivel P2](assets/img/dfd-level1.jpg "Diagrama DFD Segundo Nivel P2")
+
+## **3. DFD Segundo Nivel – P3: Procesar Texto**
+
+### **3.1 Descripción General**
+
+El proceso **P3: Procesar texto** utiliza un motor NLP para interpretar mensajes, tokenizar, generar embeddings y ejecutar un modelo deep learning para inferir la intención.
+
+**Subprocesos:**
+
+| ID | Subproceso | Descripción |
+|----|------------|-------------|
+| P3.1 | Limpiar texto | Depuración y normalización de mensajes. |
+| P3.2 | Transformar texto a token | Tokenización del mensaje. |
+| P3.3 | Generar relleno de texto | Ajuste de tamaño y consistencia. |
+| P3.4 | Inferencia sobre nuevo texto | Clasificación de la intención. |
+| P3.5 | Ejecutar modelo deep learning | Generación de respuesta final. |
+
+**Flujos de Datos:**
+
+| ID | Flujo | Descripción |
+|----|-------|-------------|
+| F4 | Frase de texto | Entrada de P3 |
+| F4.1 | Texto limpio | Salida P3.1 |
+| F4.2 | Datos token | Salida P3.2 |
+| F4.3 | Texto igual tamaño | Salida P3.3 |
+| F4.4 | Datos intent | Salida P3.4 |
+| F6 | Respuesta de intención | Salida P3.5 |
+
+**Almacén de Datos:**
+
+- **A2: Tokenize** – Datos tokenizados listos para análisis.
+
+![Diagrama DFD Segundo Nivel P3](assets/img/dfd-level2.jpg "Diagrama DFD Segundo Nivel P3")
+
+## **4. DFD Segundo Nivel – P3 (Rol Administrador)**
+
+### **4.1 Descripción General**
+
+El administrador puede cargar datos de entrenamiento, generar embeddings y entrenar modelos de NLP.
+
+**Subprocesos:**
+
+| ID | Subproceso | Descripción |
+|----|------------|-------------|
+| P3.1 | Limpiar texto | Normalización de datos administrativos. |
+| P3.2 | Transformar texto a token | Tokenización para entrenamiento. |
+| P3.3 | Tokenización | Preparación de tokens. |
+| P3.4 | Vectorización | One-hot encoding de palabras. |
+| P3.5 | Reducción de dimensiones | Creación de embeddings. |
+| P3.6 | Extracción de preguntas y respuestas | Lectura de CSV o DB MySQL. |
+| P3.7 | Creación del modelo | Entrenamiento ML/NLP. |
+| P3.8 | Predicción | Predicción de intenciones. |
+
+**Almacén de Datos:**
+
+- **A2: Tokenize/vectorDb** – Vectores tokenizados y embeddings.
+
+![Diagrama DFD Segundo Nivel P3 Administrador](assets/img/dfd-level3.jpg "Diagrama DFD Segundo Nivel P3 Administrador")
+
+
+## **5. DFD Segundo Nivel – P3 RAG1**
+
+### **5.1 Descripción General**
+
+Proceso RAG (Retrieval-Augmented Generation) para preguntas de clientes:
+
+**Subprocesos:**
+
+| ID | Subproceso | Descripción |
+|----|------------|-------------|
+| P3.1r | Transformar texto a embedding | Pregunta del cliente a vector. |
+| P3.2r | Búsqueda por similitud ANN | Recuperación de vectores similares. |
+| P3.3r | Recuperación de chunks | Fragmentos relevantes del vectorDb. |
+| P3.4r | Ejecutar modelo LLM | Generación de respuesta usando LLM. |
+
+**Flujos de Datos:**
+
+| ID | Flujo | Descripción |
+|----|-------|-------------|
+| F5.1 | Pregunta de texto | Entrada del cliente. |
+| F5.2 | Vector datos | Embedding de la pregunta. |
+| F5.3 | Retrieved | Chunks relevantes recuperados. |
+| F5.4 | Query chunks | Fragmentos adicionales de la consulta. |
+| F5.5 | Augment chunks + E3 | Chunks combinados con pregunta. |
+| F6 | Generate respuesta | Respuesta generada por LLM. |
+
+**Almacén de Datos:**
+
+- **A2: vectorDb** – Almacena vectores recuperados.
+
+![Diagrama DFD Segundo Nivel P3 RAG mensaje](assets/img/dfd-level2rag1.jpg "Diagrama DFD Segundo Nivel P3 RAG mensaje")
+
+## **6. DFD Segundo Nivel – P3 RAG2: Carga de Documentos**
+
+**Subprocesos:**
+
+| ID | Subproceso | Descripción |
+|----|------------|-------------|
+| P3.6 | Leer documentos | Lectura de documentos (txt, doc, pdf). |
+| P3.1 | Splitter de texto | División de documentos en chunks. |
+| P3.2 | Modelo de Embedding | Transformación de chunks en vectores. |
+
+**Flujos de Datos:**
+
+| ID | Flujo | Descripción |
+|----|-------|-------------|
+| F8 | Documentos preparados | Archivos txt/doc/pdf de la empresa. |
+| F9 | Nombre carpeta | Carpeta de documentos. |
+| F9.1 | Documento | Documento convertido a texto. |
+| F9.2 | Chunks | Fragmentos de texto. |
+| F9.3 | Data metadata | Metadatos de los chunks. |
+| F9.4 | Embedding | Vectores de chunks para vectorDb. |
+
+**Almacén de Datos:**
+
+- **A2: vectorDb** – Vectores de documentos y metadatos.
+
+![Diagrama DFD Segundo Nivel P3 RAG carga](assets/img/dfd-level2rag2.jpg "Diagrama DFD Segundo Nivel P3 RAG carga")
+
+## **7. DFD Tercer Nivel – P3.7 Embedding Model**
+
+**Subprocesos:**
+
+| ID | Subproceso | Descripción |
+|----|------------|-------------|
+| P3.7.1 | Generación de embeddings | Transformación de tokens a vectores. |
+| P3.7.2 | Añadir metadatos | Enriquecimiento de vectores con información adicional. |
+| P3.7.3 | Indexación | Almacenamiento en vectorDb para búsquedas. |
+
+**Almacén de Datos:**
+
+- **A2: vectorDb** – Almacena vectores con metadatos e índices para consulta eficiente.
+
+![Diagrama DFD Tercer Nivel P3.7 Administrador](assets/img/dfd-level4.jpg "Diagrama DFD Tercer Nivel P3.7 Administrador")
+
+## **8. Conclusión**
+
+El sistema combina **procesamiento de texto, NLP/NLG, embeddings y RAG**, permitiendo:
+
+- Recepción y validación de mensajes de clientes.
+- Procesamiento y tokenización para inferencia de intenciones.
+- Entrenamiento y administración de modelos de NLP por administradores.
+- Recuperación de datos y generación de respuestas precisas mediante embeddings y LLM.
+- Carga y preparación de documentos corporativos para consulta semántica.
+
+Esta documentación proporciona una visión integral del flujo de datos, almacenes y subprocesos necesarios para la implementación y mantenimiento del sistema.
