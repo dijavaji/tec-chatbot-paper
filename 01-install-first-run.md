@@ -52,12 +52,12 @@ Para optimizar el rendimiento del IDE, se recomienda deshabilitar validadores in
     *   `JAVA_HOME`: `C:\Java\jdk17.0.11` (Ruta de su instalación de Java Development Kit)
     *   `Path`: Agregue `%JAVA_HOME%\bin;%M2%;` al inicio de la variable `Path` existente.
 
-    *Captura de pantalla de configuración de variables de entorno de Maven y Java* (Referencia: Imagen en el documento original)
+![variables de entorno de Maven y Java](assets/img/mavenjava.jpg "variables de entorno de Maven y Java")
 
 #### Maven Dependencias
 Configure el repositorio local de Maven donde se descargarán las librerías. Esto se realiza editando el archivo `settings.xml` de Maven (usualmente en `%M2_HOME%/conf/settings.xml`) para apuntar a un repositorio local o remoto si fuera necesario.
 
-*Capturas de pantalla de configuración de dependencias de Maven* (Referencia: Imágenes en el documento original)
+![dependencias de Maven](assets/img/mavenDependencias.jpg "dependencias de Maven")
 
 ### 2.2 Cargar Proyectos desde GitHub
 Para obtener el código fuente de los microservicios, clone los siguientes repositorios de GitHub. Acceda a la consola o terminal y ejecute el comando `git clone` para cada proyecto:
@@ -70,7 +70,8 @@ Para obtener el código fuente de los microservicios, clone los siguientes repos
 
 Posteriormente, importe cada proyecto al IDE STS para su utilización. Utilice la opción de importar proyectos Maven existentes.
 
-*Capturas de pantalla de clonación e importación de proyectos en STS* (Referencia: Imágenes en el documento original)
+
+![importación de proyectos en STS](assets/img/importSts.jpg "importación de proyectos en STS")
 
 ### 2.3 Compilar y Ejecutar Proyectos (Entorno Local)
 
@@ -80,17 +81,16 @@ Acceda a la ruta de cada proyecto en la consola y ejecute los siguientes comando
     ```bash
     mvn clean install -Dmaven.test.skip=true
     ```
-    *Captura de pantalla de la ejecución de mvn clean install* (Referencia: Imagen en el documento original)
+![ejecución de mvn clean install](assets/img/cleanInstallmvn.jpg "ejecución de mvn clean install")
 
 2.  **Ejecutar la Aplicación en Local con Perfil `local`**:
     ```bash
     mvn spring-boot:run -Dspring-boot.run.profiles=local
     ```
-    *Captura de pantalla de la ejecución de spring-boot:run* (Referencia: Imagen en el documento original)
+![ejecución de spring-boot:run](assets/img/springRunmvn.jpg "ejecución de spring-boot:run")
 
 Si la ejecución se realiza sin errores, podrá acceder a la documentación de la API Rest a través de Swagger UI:
 
 *   **Swagger UI**: [http://localhost:8081/swagger-ui/index.html](http://localhost:8081/swagger-ui/index.html)
 
-*Captura de pantalla de la interfaz de Swagger UI* (Referencia: Imagen en el documento original)
-
+![interfaz de Swagger UI](assets/img/swaggerSpring.jpg "interfaz de Swagger UI")
