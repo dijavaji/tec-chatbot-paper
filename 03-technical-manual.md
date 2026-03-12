@@ -121,8 +121,6 @@ nvtop es un monitor de tareas de Linux que permite visualizar el uso de GPU de N
     ```bash
     nvtop
     ```
-    *Captura de pantalla de la interfaz de nvtop* (Referencia: Imagen en el documento original)
-
 ![interfaz de nvtop](assets/img/pantallanvtop.jpg "interfaz de nvtop")
 
 ### 1.6 Procedimiento de Actualización de Versiones de Microservicios Docker al Servidor
@@ -135,7 +133,7 @@ Para actualizar las versiones de los microservicios docker en el servidor, siga 
     docker pull technoloqie/tec-chatbot-api:latest
     # ... para todos los microservicios
     ```
-    *Capturas de pantalla de la actualización de imágenes Docker* (Referencia: Imágenes en el documento original)
+![actualización de imágenes Docker](assets/img/dockerPull.jpg "actualización de imágenes Docker")
 
 2.  **Detener y Eliminar Contenedores Antiguos**: Detenga y elimine las instancias en ejecución de los microservicios antiguos:
     ```bash
@@ -153,27 +151,29 @@ Para instalar MySQL 8.0 utilizando Docker:
     ```bash
     docker pull mysql:8.0
     ```
-    *Captura de pantalla del pull de la imagen MySQL* (Referencia: Imagen en el documento original)
 
 2.  **Ejecutar Contenedor MySQL**: Inicie un contenedor MySQL, configurando la contraseña del usuario root y mapeando el puerto:
     ```bash
     docker run --name mysql-chatbot -e MYSQL_ROOT_PASSWORD=your_secure_password -p 3306:3306 -d mysql:8.0
     ```
-    *Captura de pantalla de la ejecución del contenedor MySQL* (Referencia: Imagen en el documento original)
+
+![ejecución del contenedor MySQL](assets/img/runMysql.jpg "ejecución del contenedor MySQL")
 
 3.  **Acceder a MySQL (opcional)**:
     ```bash
     mysql -h 127.0.0.1 -u root -p
     ```
     Ingrese la contraseña configurada.
-    *Captura de pantalla del acceso a MySQL* (Referencia: Imagen en el documento original)
+
+![acceso a MySQL](assets/img/accesoMyslq.jpg "acceso a MySQL")
 
 ### 1.8 Crear una Base de Datos en MongoDB Atlas
 
 MongoDB Atlas es una base de datos en la nube (DBaaS) que se utilizará para almacenar datos del chatbot. Siga estos pasos para configurar una base de datos gratuita (M0 Sandbox):
 
 1.  **Registrar una cuenta**: Vaya a [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) y regístrese con su dirección de correo electrónico.
-    *Captura de pantalla de registro en MongoDB Atlas* (Referencia: Imagen en el documento original)
+
+![registro en MongoDB Atlas](assets/img/registroMongodb.jpg "registro en MongoDB Atlas")
 
 2.  **Crear un Nuevo Cluster**: Después de iniciar sesión:
     *   Llene los campos `Nombre de la organización` y `Nombre del proyecto`.
@@ -184,18 +184,25 @@ MongoDB Atlas es una base de datos en la nube (DBaaS) que se utilizará para alm
     *   Asigne un `Nombre del Cluster` o deje el valor por defecto (`Cluster0`).
     *   Haga clic en `Create Cluster`.
     Espere a que el cluster se aprovisione (1-3 minutos).
-    *Capturas de pantalla del proceso de creación del cluster* (Referencia: Imágenes en el documento original)
+![creación del cluster](assets/img/clusterMongodb.jpg "creación del cluster")
 
 3.  **Crear un Usuario de Base de Datos**:
     *   Especifique un `Nombre de usuario` y una `Contraseña` (o use la sugerida por Atlas).
     *   Haga clic en `Create Database User`.
-    *Capturas de pantalla de la creación del usuario de base de datos* (Referencia: Imágenes en el documento original)
 
 4.  **Configurar Lista de Acceso IP**:
     *   Agregue su dirección IP actual a la lista de acceso (`Add My Current IP Address`).
     *   Haga clic en `Finish and Close`.
     *   Finalmente, haga clic en `Go to Overview`.
-    *Capturas de pantalla de la configuración de IP y finalización* (Referencia: Imágenes en el documento original)
+
+5.  **Crear una base de datos**:
+    *   **Navegación**: Desde la página principal de su clúster, acceda a la sección de `Collections` mediante la opción "Explorar colecciones".
+    *   **Inicio de Creación**: En ausencia de bases de datos existentes, el sistema le guiará para crear una nueva base de datos y colección a través del botón "Añadir mis propios datos".
+    *   **Configuración Inicial**: Especifique el `Nombre de la Base de Datos` y el `Nombre de la Colección` en el modal emergente.
+    *   **Confirmación**: Haga clic en el botón "Crear" para instanciar la base de datos y su colección inicial.
+    *   **Disponibilidad**: La base de datos estará inmediatamente disponible para la inserción manual de documentos o la conexión a través de controladores de MongoDB para la integración programática.
+
+![creación del base](assets/img/createdbMongo.jpg "creación del base")
 
 ### 1.9 Instalar Bot para Telegram
 
