@@ -143,6 +143,8 @@ Para actualizar las versiones de los microservicios docker en el servidor, siga 
 
 3.  **Lanzar Nuevos Contenedores**: Inicie los nuevos contenedores con las imágenes actualizadas, asegurándose de configurar las variables de entorno y mapeos de puertos correctamente (usando `docker run` o `docker-compose up`).
 
+![ejecución de imágenes Docker](assets/img/dockerRun.jpg "ejecución de imágenes Docker")
+
 ### 1.7 Instalación de MySQL en Contenedor Docker
 
 Para instalar MySQL 8.0 utilizando Docker:
