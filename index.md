@@ -4,3 +4,4 @@
 - [Software User Manual](04-user-manual.md)
 - [The User Story](05-userhistory-document.md)
 - [Data Flow Diagrams](06-dfd-document.md)
+- [Use Case Diagram](07-use-case-document.md)
