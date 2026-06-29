@@ -6,11 +6,12 @@ A continuación se presenta la descripción técnica del **Diagrama de Casos de 
 
 ---
 
-# 4. Diagrama de Casos de Uso
+# 1. Diagrama de Casos de Uso
 
 <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;lightbox&quot;:false,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;page&quot;:2,&quot;dark-mode&quot;:&quot;light&quot;,&quot;toolbar&quot;:&quot;pages zoom layers tags&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;url&quot;:&quot;https://drive.google.com/uc?id=11qEmWJ0ir9RmQVn_2lMrIeYkJvzS8wEo&amp;export=download&quot;}"></div>
+<script type="text/javascript" src="https://viewer.diagrams.net/embed2.js?&fetch=https%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D11qEmWJ0ir9RmQVn_2lMrIeYkJvzS8wEo%26export%3Ddownload"></script>
 
-## 4.1 Descripción General
+## 1.1 Descripción General
 
 El diagrama de casos de uso representa las funcionalidades principales del **Sistema Smart de Chatbot**, así como la interacción entre los actores externos y los servicios proporcionados por la plataforma.
 
@@ -23,7 +24,7 @@ El objetivo principal del sistema es ofrecer respuestas automáticas mediante t�
 
 ---
 
-# 4.2 Actores del Sistema
+# 1.2 Actores del Sistema
 
 ## Usuario del Sitio (Site User)
 
@@ -54,7 +55,7 @@ Representa al personal encargado de administrar el funcionamiento del sistema y 
 
 ---
 
-# 4.3 Descripción de los Casos de Uso
+# 1.3 Descripción de los Casos de Uso
 
 ---
 
@@ -317,7 +318,7 @@ El sistema genera indicadores que permiten supervisar el comportamiento del chat
 
 ---
 
-# 4.4 Relaciones entre Casos de Uso
+# 1.4 Relaciones entre Casos de Uso
 
 El modelo incorpora relaciones **«include»** y **«extend»**, utilizadas para representar dependencias funcionales entre los distintos procesos.
 
@@ -345,8 +346,8 @@ Las relaciones de extensión representan funcionalidades opcionales o complement
 
 ---
 
-# 4.5 Consideraciones Arquitectónicas
+# 1.5 Consideraciones Arquitectónicas
 
-El diagrama evidencia una arquitectura funcional basada en la separación de responsabilidades entre los procesos de interacción, autenticación, administración del conocimiento y procesamiento inteligente de la información. El componente de **Machine Learning/IA** actúa como el núcleo del sistema, integrando las consultas del usuario con una base de conocimiento enriquecida mediante procesos ETL administrados desde el CMS.
+El diagrama evidencia una arquitectura funcional basada en la separación de responsabilidades entre los procesos de interacción, autenticación, administración del conocimiento y procesamiento inteligente de la información. El componente de **Machine Learning/IA** actúa como el núcleo del sistema, integrando las consultas del usuario con una base de conocimiento enriquecida mediante procesos ETL administrados desde el sistema.
 
 Esta organización favorece la escalabilidad, el mantenimiento y la evolución del sistema, al desacoplar la gestión documental, el procesamiento de datos y la generación de respuestas. Asimismo, la incorporación de mecanismos de autenticación y autorización garantiza la seguridad en el acceso a funcionalidades sensibles, mientras que la visualización de indicadores proporciona soporte para el monitoreo y la mejora continua del desempeño del chatbot.
